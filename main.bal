@@ -13,7 +13,7 @@ configurable string end_session_endpoint = "";
 service / on new http:Listener(8080) {
 
     
-    resource function get oauth2/token/wellknown/openidconfiguration() returns json {
+    resource function get oauth2/token/\.well\-known/openid\-configuration() returns json {
         json config = {
             "issuer": issuer,
             "token_endpoint": token_endpoint,
